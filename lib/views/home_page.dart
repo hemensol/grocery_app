@@ -117,6 +117,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                     itemBuilder: (context, index) {
                       return GroceryTile(
+                        item: state.Item[index],
                         name: state.Item[index].name,
                         price: state.Item[index].price,
                         image: state.Item[index].image,

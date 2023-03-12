@@ -24,4 +24,6 @@ class Item {
   }
   return parsedItems;
   }
+
+  static void add(Item item) {}
 }

@@ -7,12 +7,19 @@ import '../cart/cart_state.dart';
 
 class CartBloc extends Bloc<CartEvent, CartState> {
   final _apiServiceProvider = ApiServiceProvider();
+  List cartItems = [];
 
   CartBloc() : super(CartInitialState()) {
     on<GetDataButtonPressed>((event, emit) async {
       emit(CartLoadingState());
       final items = await _apiServiceProvider.fetchItem();
       emit(CartSuccessState(Item: items!));
+    });
+
+    on<ManipulateItem>((event, emit) {
+      emit(CartLoadingState());
+      cartItems.add(event.cartItem);
+      emit(CartSuccessState(Item: cartItems));
     });
   }
 }

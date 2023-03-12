@@ -33,9 +33,7 @@ class CartSuccessState extends CartState {
   CartSuccessState({
     required this.Item, 
   });
-  void removeItemFromCart(int index) {
-    Item.removeAt(index);
-  }
+  
   @override
   // TODO: implement props
   List<Object> get props => [];
