@@ -13,19 +13,7 @@ class CartLoadingState extends CartState {
   // TODO: implement props
   List<Object> get props => [];
 }
-// class RemoveItemFromCart extends CartState {
-//   final List Item;
 
-//   RemoveItemFromCart({
-//     required this.Item, 
-//   });
-//   void removeItemFromCart(int index) {
-//     Item.removeAt(index);
-//   }
-//   @override
-//   // TODO: implement props
-//   List<Object> get props => [];
-// }
 
 class CartSuccessState extends CartState {
   final List Item;

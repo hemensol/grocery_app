@@ -10,15 +10,20 @@ class CartBloc extends Bloc<CartEvent, CartState> {
   List cartItems = [];
 
   CartBloc() : super(CartInitialState()) {
-    on<GetDataButtonPressed>((event, emit) async {
+     on<GetCartItems>((event, emit) async {
       emit(CartLoadingState());
-      final items = await _apiServiceProvider.fetchItem();
-      emit(CartSuccessState(Item: items!));
+      emit(CartSuccessState(Item: cartItems));
     });
 
-    on<ManipulateItem>((event, emit) {
+    on<AddCartItem>((event, emit) {
       emit(CartLoadingState());
       cartItems.add(event.cartItem);
+      emit(CartSuccessState(Item: cartItems));
+    });
+
+    on<RemoveCartItem>((event, emit) {
+      emit(CartLoadingState());
+      cartItems.removeWhere((element) => element.id == event.cartItem.id);
       emit(CartSuccessState(Item: cartItems));
     });
   }

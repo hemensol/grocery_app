@@ -1,0 +1,8 @@
+version: "Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)"
+options: "75f0614e712479513e591340774954510bc752d09c8ddb56fe3982f04e1ca8ea"
+build_start_time: [1678663421, 958340167]
+build_end_time: [1678663427, 992413043]
+inputs:
+  "/Users/hemenzewdu/Documents/MobileApp/grocery_app/macos/Flutter/GeneratedPluginRegistrant.swift": [1678663395, 998305320]
+  "/Users/hemenzewdu/Documents/MobileApp/grocery_app/macos/Runner/AppDelegate.swift": [1671101440, 0]
+  "/Users/hemenzewdu/Documents/MobileApp/grocery_app/macos/Runner/MainFlutterWindow.swift": [1671101440, 0]

@@ -4,16 +4,27 @@ import '../../model/item_model.dart';
 
 abstract class CartEvent extends Equatable {}
 
-class GetDataButtonPressed extends CartEvent {
+class GetCartItems extends CartEvent {
+  GetCartItems();
 
   @override
   List<Object> get props => [];
 }
 
-class ManipulateItem extends CartEvent {
+class AddCartItem extends CartEvent {
   Item cartItem;
 
-  ManipulateItem({
+  AddCartItem({
+    required this.cartItem
+    });
+
+  @override
+  List<Object> get props => [];
+}
+class RemoveCartItem extends CartEvent {
+  Item cartItem;
+
+  RemoveCartItem({
     required this.cartItem
     });
 

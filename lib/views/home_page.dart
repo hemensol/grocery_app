@@ -43,10 +43,9 @@ class _HomePageState extends State<HomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.green,
-        onPressed: ()  => BlocProvider(
-          create: (context) => CartBloc(),
-          child: CartPage(),
-        ),
+        onPressed: ()  {
+                Navigator.pushNamed(context, '/cart');
+              },
         child: const Icon(Icons.shopping_bag),
       ),
 

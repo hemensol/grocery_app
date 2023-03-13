@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../bloc/home/home_bloc.dart';
 import '../views/home_page.dart';
 import 'bloc/cart/cart_bloc.dart';
+import 'views/cart_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +13,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
@@ -29,7 +29,11 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.green,
         ),
-        home: const HomePage(),
+        // home: const HomePage(),
+        routes: {
+         '/': (context) => HomePage(),
+          '/cart': (context) => CartPage(),
+        },
       ),
     );
   }

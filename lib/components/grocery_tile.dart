@@ -54,7 +54,7 @@ class GroceryTile extends StatelessWidget {
               MaterialButton(
                 onPressed: () {
                     BlocProvider.of<CartBloc>(context)
-                        .add(ManipulateItem(cartItem: item));
+                        .add(AddCartItem(cartItem: item));
                   },
                 color: Colors.green,
                 child: Text(

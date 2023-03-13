@@ -1,9 +1,11 @@
 class Item {
+  final int id;
   final String name;
   final num price;
   final String image;
 
   Item({
+    required this.id,
     required this.name,
     required this.price,
     required this.image,
@@ -11,6 +13,7 @@ class Item {
 
   factory Item.fromJson(Map<String, dynamic> parsedJson) {
   return Item(
+    id: parsedJson['id'],
     name: parsedJson['category'],
     price: parsedJson['price'],
     image: parsedJson['image'],
