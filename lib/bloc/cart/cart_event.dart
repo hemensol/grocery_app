@@ -23,9 +23,11 @@ class AddCartItem extends CartEvent {
 }
 class RemoveCartItem extends CartEvent {
   Item cartItem;
+  int index;
 
   RemoveCartItem({
-    required this.cartItem
+    required this.cartItem,
+    required this.index
     });
 
   @override

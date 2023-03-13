@@ -11,6 +11,7 @@ class CartItems extends StatelessWidget {
   final String name;
   final num price;
   final String image;
+  final int index;
 
   CartItems({
     super.key,
@@ -18,6 +19,7 @@ class CartItems extends StatelessWidget {
     required this.name,
     required this.price,
     required this.image,
+    required this.index,
   });
 
   @override
@@ -47,7 +49,7 @@ class CartItems extends StatelessWidget {
                 icon: const Icon(Icons.cancel),
                 onPressed: () {
                   BlocProvider.of<CartBloc>(context)
-                    .add(RemoveCartItem(cartItem: item));
+                    .add(RemoveCartItem(cartItem: item, index: index));
                 },
               )
             ),

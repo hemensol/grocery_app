@@ -15,7 +15,7 @@ class Item {
   return Item(
     id: parsedJson['id'],
     name: parsedJson['category'],
-    price: parsedJson['price'],
+    price: parsedJson['price'].round(),
     image: parsedJson['image'],
   );
   }

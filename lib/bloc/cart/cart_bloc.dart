@@ -8,6 +8,8 @@ import '../cart/cart_state.dart';
 class CartBloc extends Bloc<CartEvent, CartState> {
   final _apiServiceProvider = ApiServiceProvider();
   List cartItems = [];
+  int index = 0;
+  num price = 0;
 
   CartBloc() : super(CartInitialState()) {
      on<GetCartItems>((event, emit) async {
@@ -19,12 +21,14 @@ class CartBloc extends Bloc<CartEvent, CartState> {
       emit(CartLoadingState());
       cartItems.add(event.cartItem);
       emit(CartSuccessState(Item: cartItems));
+      price = price + event.cartItem.price;
     });
 
     on<RemoveCartItem>((event, emit) {
       emit(CartLoadingState());
-      cartItems.removeWhere((element) => element.id == event.cartItem.id);
+      cartItems.removeAt(event.index);
       emit(CartSuccessState(Item: cartItems));
+      price = price - event.cartItem.price;
     });
   }
 }

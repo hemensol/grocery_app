@@ -5,6 +5,7 @@ import '../bloc/home/home_bloc.dart';
 import '../views/home_page.dart';
 import 'bloc/cart/cart_bloc.dart';
 import 'views/cart_page.dart';
+import 'views/profile_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,8 +32,9 @@ class MyApp extends StatelessWidget {
         ),
         // home: const HomePage(),
         routes: {
-         '/': (context) => HomePage(),
+          '/': (context) => HomePage(),
           '/cart': (context) => CartPage(),
+          '/profile': (context) => ProfilePage(),
         },
       ),
     );

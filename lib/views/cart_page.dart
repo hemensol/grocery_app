@@ -53,6 +53,7 @@ class CartPage extends StatelessWidget {
                     name: state.Item[index].name, 
                     price: state.Item[index].price, 
                     image: state.Item[index].image,
+                    index: index,
                     );
                 },
               );
@@ -83,15 +84,15 @@ class CartPage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Container(
-                    padding: const EdgeInsets.all(12),
-                    child: Row(
-                      children: const [
-                      // total price
-                      Text(
-                        '\$2000',
-                        // '\$${value.calculateTotal()}',
-                        style: TextStyle(
+                  BlocBuilder<CartBloc, CartState>(
+                    builder: (context, state) {
+                      return  Container(
+                      padding: const EdgeInsets.all(12),
+                      child: Row(
+                        children: [
+                       Text(
+                        '\$${BlocProvider.of<CartBloc>(context).price.round()}',
+                        style: const TextStyle(
                           color: Colors.white,
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
@@ -99,7 +100,10 @@ class CartPage extends StatelessWidget {
                       ),
                       ],
                     ),
-                  ),
+                  );
+                    },
+                  )
+                 
                 ],
               ),
             ),

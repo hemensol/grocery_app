@@ -26,15 +26,18 @@ class _HomePageState extends State<HomePage> {
         centerTitle: false,
         actions: [
           Padding(
-            padding: const EdgeInsets.only(right: 24.0),
-            child: Container(
-              padding: EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                color: Colors.grey[200],
-                borderRadius: BorderRadius.circular(12),
+            padding: const EdgeInsets.only(right: 24.0, bottom: 5,),
+            child: MaterialButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/profile');
+              },
+              color: Color.fromARGB(255, 239, 235, 235),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15)
               ),
               child: const Icon(
                 Icons.person,
+                size: 35,
                 color: Colors.green,
               ),
             ),
