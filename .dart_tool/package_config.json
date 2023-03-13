@@ -140,6 +140,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "mobile_number",
+      "rootUri": "file:///Users/hemenzewdu/flutter/.pub-cache/hosted/pub.dartlang.org/mobile_number-2.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "nested",
       "rootUri": "file:///Users/hemenzewdu/flutter/.pub-cache/hosted/pub.dartlang.org/nested-1.0.0",
       "packageUri": "lib/",
@@ -284,7 +290,7 @@
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2023-03-12T21:31:53.331328Z",
+  "generated": "2023-03-13T06:42:40.679614Z",
   "generator": "pub",
   "generatorVersion": "2.18.6"
 }

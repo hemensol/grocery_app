@@ -1,7 +1,7 @@
 grocery_app
 2.18
-file:///Users/hemenzewdu/Documents/grocery_app/
-file:///Users/hemenzewdu/Documents/grocery_app/lib/
+file:///Users/hemenzewdu/Documents/MobileApp/grocery_app/
+file:///Users/hemenzewdu/Documents/MobileApp/grocery_app/lib/
 async
 2.14
 file:///Users/hemenzewdu/flutter/.pub-cache/hosted/pub.dartlang.org/async-2.9.0/
@@ -86,6 +86,10 @@ meta
 2.12
 file:///Users/hemenzewdu/flutter/.pub-cache/hosted/pub.dartlang.org/meta-1.8.0/
 file:///Users/hemenzewdu/flutter/.pub-cache/hosted/pub.dartlang.org/meta-1.8.0/lib/
+mobile_number
+2.12
+file:///Users/hemenzewdu/flutter/.pub-cache/hosted/pub.dartlang.org/mobile_number-2.1.1/
+file:///Users/hemenzewdu/flutter/.pub-cache/hosted/pub.dartlang.org/mobile_number-2.1.1/lib/
 nested
 2.12
 file:///Users/hemenzewdu/flutter/.pub-cache/hosted/pub.dartlang.org/nested-1.0.0/
