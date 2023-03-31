@@ -35,13 +35,6 @@ class Repository {
     return await connection.query(table, where: 'id=?', whereArgs: [itemId]);
   }
 
-  updateData(table, data) async {
-    var connection = await database;
-    return await connection.rawUpdate('UPDATE $table SET first_name = ? WHERE id = ?', [
-      data['first_name'],
-      data['id'],
-    ]);
-  }
 
   deleteData(table, itemId) async {
     var connection = await database;

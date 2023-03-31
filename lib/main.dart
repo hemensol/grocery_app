@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:grocery_app/bloc/cart/cart_event.dart';
 
 import '../bloc/home/home_bloc.dart';
 import '../views/home_page.dart';
@@ -33,11 +34,13 @@ class MyApp extends StatelessWidget {
         // home: const HomePage(),
         routes: {
           '/': (context) => HomePage(),
-          '/cart': (context) => CartPage(),
+          '/cart': (context) => BlocProvider(
+                create: (context) => CartBloc()..add(GetCartItems()),
+                child: CartPage(),
+              ),
           '/profile': (context) => ProfilePage(),
         },
       ),
     );
   }
 }
-

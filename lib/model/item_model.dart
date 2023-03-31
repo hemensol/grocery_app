@@ -14,7 +14,7 @@ class Item {
   factory Item.fromJson(Map<String, dynamic> parsedJson) {
   return Item(
     id: parsedJson['id'],
-    name: parsedJson['category'],
+    name: parsedJson.containsKey('category') ? parsedJson['category'] : parsedJson['name'],
     price: parsedJson['price'].round(),
     image: parsedJson['image'],
   );

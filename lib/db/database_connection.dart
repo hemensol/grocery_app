@@ -5,7 +5,7 @@ import 'package:sqflite/sqflite.dart';
 class DatabaseConnection {
   setDatabase() async {
     var directory = await getApplicationDocumentsDirectory();
-    var path = join(directory.path, "item");
+    var path = join(directory.path, 'item');
     var database =
         await openDatabase(path, version: 1, onCreate: _onCreatingDatabase);
     return database;
@@ -13,7 +13,7 @@ class DatabaseConnection {
 
   _onCreatingDatabase(Database database, int version) async {
     await database.execute(
-        "CREATE TABLE user(id INTEGER PRIMARY KEY ,name TEXT,price INTEGER,image TEXT)");
+        "CREATE TABLE item(id INTEGER PRIMARY KEY ,name TEXT,price INTEGER,image TEXT)");
     }
 }
 

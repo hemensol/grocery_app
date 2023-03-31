@@ -1,5 +1,5 @@
-import 'package:local_db/repository.dart';
-import 'package:local_db/user.dart';
+import 'package:grocery_app/db/database_repo.dart';
+import 'package:grocery_app/model/item_model.dart';
 
 class Service {
   Repository? _repository;
@@ -8,19 +8,15 @@ class Service {
     _repository = Repository();
   }
 
-  saveUser(User user) async {
-    return await _repository!.insertData('user', user.toJson());
+  saveItem(Item item) async {
+    return await _repository!.insertData('item', item.toJson());
   }
 
-  readUser() async {
-    return await _repository!.readData('user');
+  readItem() async {
+    return await _repository!.readData('item');
   }
 
-  updateUser(User user) async {
-    return await _repository!.updateData('user', user.toJson());
-  }
-
-  deleteUser(dispatchId) async {
-    return await _repository!.deleteData('user', dispatchId);
+  deleteItem(dispatchId) async {
+    return await _repository!.deleteData('item', dispatchId);
   }
 }
