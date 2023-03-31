@@ -20,6 +20,15 @@ class Item {
   );
   }
 
+  toJson() {
+    Map<String, dynamic> json = {};
+    json['id'] = id;
+    json['name'] = name;
+    json['price'] = price;
+    json['image'] = image;
+    return json;
+  }
+
   static List ItemList(List items) {
   List parsedItems = [];
   for (var i = 0; i < items.length; i++) {
